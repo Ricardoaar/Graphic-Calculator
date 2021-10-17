@@ -69,7 +69,6 @@ class Drawer {
 
 String.prototype.hexToRGB = function () {
     if (this.length !== 6) {
-        console.log(this.substring(1).length === 6);
         if (this.substring(1).length !== 6) {
             throw "number must have 6 characters";
         }
