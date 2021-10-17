@@ -1,0 +1,31 @@
+{
+  "name": "calculadora-grafica",
+  "version": "1.0.0",
+  "description": "Calculadora gráfica y mágica!",
+  "main": "index.js",
+  "scripts": {
+    "play": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Run19/Calculadora-grafica.git"
+  },
+  "keywords": [
+    "calculadora",
+    "grafica",
+    "javascript",
+    "html",
+    "css",
+    "web",
+    "sass"
+  ],
+  "author": "Ricardo Rito Anguiano <26richardr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Run19/Calculadora-grafica/issues"
+  },
+  "homepage": "https://github.com/Run19/Calculadora-grafica#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
