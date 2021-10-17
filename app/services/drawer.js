@@ -7,12 +7,12 @@ class Drawer {
     }
 
     setValues() {
-        const style = getComputedStyle(canvas);
-        canvas.width = parseInt(style.width);
-        canvas.height = parseInt(style.height);
+        const style = getComputedStyle(this.canvas);
+        this.canvas.width = parseInt(style.width);
+        this.canvas.height = parseInt(style.height);
 
-        this.width = canvas.width;
-        this.height = canvas.height;
+        this.width = this.canvas.width;
+        this.height = this.canvas.height;
         this.start = -(this.width / this.unit) / 2;
     }
 
