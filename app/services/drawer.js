@@ -1,64 +1,71 @@
-//Getting necessary components
-const canvas = document.querySelector("#plane");
-const parent = document.querySelector(".plane-wrapper");
-const ctx = canvas.getContext("2d");
-const unit = 50;
-ctx.font = "1.4rem Arial";
-let width;
-let height;
-let start;
-
-
-const getValues = () => {
-    const style = getComputedStyle(canvas);
-    canvas.width = parseInt(style.width);
-    canvas.height = parseInt(style.height);
-
-    width = canvas.width;
-    height = canvas.height;
-    start = -(width / unit) / 2;
-}
-
-
-function drawAxis(colors =
-                      {
-                          lowAxis: "rgba(15,15,15,0.2)",
-                          mainAxis: "#ffffff",
-                          numbers: "rgba(15,15,15,0.6)"
-                      }
-) {
-
-    for (let i = 0; i < width / unit; i++) {
-        ctx.fillStyle = colors.lowAxis;
-        ctx.fillRect(i * unit, 0, 1.2, height);
-        ctx.fillRect(0, i * unit, width, 1.2);
-        ctx.fillStyle = colors.numbers;
-        ctx.fillText(`${start + i}`, i * unit, height / 2);
-        ctx.fillText(`${start + i}`, width / 2, i * unit);
+class Drawer {
+    constructor(canvas, unit, font) {
+        this.canvas = canvas;
+        this.ctx = this.canvas.getContext("2d");
+        this.unit = unit;
+        this.font = font;
     }
 
-    ctx.fillStyle = colors.mainAxis;
-    ctx.fillRect(0, height / 2, 10000, 1.2);
-    ctx.fillRect(width / 2, 0, 1.2, 10000);
+    setValues() {
+        const style = getComputedStyle(canvas);
+        canvas.width = parseInt(style.width);
+        canvas.height = parseInt(style.height);
+
+        this.width = canvas.width;
+        this.height = canvas.height;
+        this.start = -(this.width / this.unit) / 2;
+    }
+
+    drawAxis(colors =
+                 {
+                     lowAxis: "rgba(15,15,15,0.2)",
+                     mainAxis: "#ffffff",
+                     numbers: "rgba(15,15,15,0.6)"
+                 }
+    ) {
+        this.setValues();
+        this.ctx.font = this.font;
+        for (let i = 0; i < this.width / this.unit; i++) {
+            this.ctx.fillStyle = colors.lowAxis;
+            this.ctx.fillRect(i * this.unit, 0, 1.2, this.height);
+            this.ctx.fillRect(0, i * this.unit, this.width, 1.2);
+            this.ctx.fillStyle = colors.numbers;
+            this.ctx.fillText(`${this.start + i}`, i * this.unit, this.height / 2);
+            this.ctx.fillText(`${this.start + i}`, this.width / 2, i * this.unit);
+        }
+
+        this.ctx.fillStyle = colors.mainAxis;
+        this.ctx.fillRect(0, this.height / 2, 10000, 1.2);
+        this.ctx.fillRect(this.width / 2, 0, 1.2, 10000);
+        this.currentGraphs = 0;
+    }
+
+
+    drawBar(x, y, color) {
+
+        if (Math.abs(x) > 40 || Math.abs(y) > 40) {
+
+            alert("Las coordenadas deben estar entre -40 y 40");
+            return;
+        }
+
+        if (this.currentGraphs >= 5) {
+            alert("Máximo 5 gráficas!");
+            return;
+        }
+
+        const rgbColor = color.hexToRGB();
+        this.ctx.fillStyle = `rgba(${rgbColor.r},${rgbColor.g},${rgbColor.b},0.5)`;
+        const barPositionX = this.width / 2 + x * this.unit - this.unit / 2;
+        this.ctx.fillRect(barPositionX
+            , this.height / 2,
+            this.unit
+            , -y * this.unit);
+        this.currentGraphs++;
+    }
+
 
 }
-
-
-function AppendLines(x, y) {
-}
-
-function drawBar(x, y, color) {
-    const rgbColor = color.hexToRGB();
-    ctx.fillStyle = `rgba(${rgbColor.r},${rgbColor.g},${rgbColor.b},0.5)`;
-    const barPositionX = width / 2 + x * unit - unit / 2;
-    ctx.fillRect(barPositionX
-        , height / 2,
-        unit
-        , -y * unit);
-
-
-}
-
 
 String.prototype.hexToRGB = function () {
     if (this.length !== 6) {
@@ -84,7 +91,5 @@ String.prototype.hexToRGB = function () {
 }
 
 
-export default {
-    drawAxis, getValues, drawBar
-};
+export default Drawer;
 

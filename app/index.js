@@ -1,7 +1,10 @@
-import drawer from "./services/drawer.js";
+import Drawer from "./services/drawer.js";
 
+const canvas = document.querySelector("#plane");
 
-const graphBtn = document.querySelector("#graph")
+const drawer = new Drawer(canvas, 25, "bold  1.4rem roboto");
+const graphBtn = document.querySelector("#graph");
+const restartBtn = document.querySelector("#restart");
 
 
 function getBarPosition() {
@@ -12,8 +15,10 @@ function getBarPosition() {
 }
 
 graphBtn.addEventListener("click", getBarPosition);
+restartBtn.addEventListener("click", () => {
+    drawer.drawAxis();
+});
 
-drawer.getValues();
 drawer.drawAxis();
 
 

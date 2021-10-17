@@ -9,29 +9,31 @@
 <body>
 <header class="header">
     <h1>Calculadora Grafica</h1>
-</header>
-<main class="main">
-    <div class="main__coords">
-        <div class="main__coords__container">
-            <label for="coord_x" class="main__coords__container--label">Coordenada X
+    <div class="header__coords">
+        <div class="header__coords__container">
+            <label for="coord_x" class="header__coords__container--label">Coordenada X
             </label>
-            <input id="coord_x" class="main__coords__container--input" type="number">
-            <label for="coord_y" class="main__coords__container--label">Coordenada Y
+            <input id="coord_x" class="header__coords__container--input" type="number">
+            <label for="coord_y" class="header__coords__container--label">Coordenada Y
             </label>
-            <input id="coord_y" class="main__coords__container--input" type="number">
+            <input id="coord_y" class="header__coords__container--input" type="number">
         </div>
-        <div class="main__coords__container">
-            <button id="graph" class="main__coords__container--btn" type="button">¡Graficar!
+        <div class="header__coords__container">
+            <button id="graph" class="header__coords__container--btn" type="button">¡Graficar!
             </button>
             <input id="color" type="color" value="#6A18CD">
-            <button id="restart" class="main__coords__container--btn" type="button">¡Reiniciar!
+            <button id="restart" class="header__coords__container--btn" type="button">¡Reiniciar!
             </button>
         </div>
     </div>
+
+</header>
+<main class="main">
+
+
     <div class="graphics">
         <div class="plane-wrapper">
             <canvas id="plane">
-
             </canvas>
         </div>
     </div>
@@ -39,8 +41,6 @@
 
 </main>
 <script type="module" src="app/index.js">
-</script>
-<script type="text/javascript" src="app/services/zoomCanvas.js">
 </script>
 </body>
 </html>

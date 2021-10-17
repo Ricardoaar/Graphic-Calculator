@@ -1,31 +1,36 @@
 {
-  "name": "calculadora-grafica",
-  "version": "1.0.0",
-  "description": "Calculadora gráfica y mágica!",
-  "main": "index.js",
-  "scripts": {
-    "play": "live-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Run19/Calculadora-grafica.git"
-  },
-  "keywords": [
-    "calculadora",
-    "grafica",
-    "javascript",
-    "html",
-    "css",
-    "web",
-    "sass"
-  ],
-  "author": "Ricardo Rito Anguiano <26richardr@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Run19/Calculadora-grafica/issues"
-  },
-  "homepage": "https://github.com/Run19/Calculadora-grafica#readme",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "name": "calculadora-grafica",
+    "version": "1.0.0",
+    "description": "Calculadora gráfica y mágica!",
+    "main": "index.js",
+    "scripts": {
+        "play": "live-server",
+        "lint": "eslint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Run19/Calculadora-grafica.git"
+    },
+    "keywords": [
+        "calculadora",
+        "grafica",
+        "javascript",
+        "html",
+        "css",
+        "web",
+        "sass"
+    ],
+    "author": "Ricardo Rito Anguiano <26richardr@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Run19/Calculadora-grafica/issues"
+    },
+    "homepage": "https://github.com/Run19/Calculadora-grafica#readme",
+    "devDependencies": {
+        "eslint": "^8.0.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "live-server": "^1.1.0",
+        "prettier": "^2.4.1"
+    }
 }

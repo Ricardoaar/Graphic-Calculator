@@ -2,15 +2,14 @@
 
 Calculadora gráfica y muy pero muy mágica
 
-#### ¡Ingresa hasta 5 coordenadas distintas y mira la magia!
+#### ¡Ingresa hasta 5 coordenadas distintas!
 
+Gráfica desde -40 hasta 40 en el eje **x** y **y**
 ___
 
 ## Instalación
 
-
-gh-pages: 
-
+gh-pages:
 
 ¡Córrelo localmente!
 
@@ -21,19 +20,9 @@ gh-pages:
 2.- Instalar dependencias:
 
 ``
-npm install 
+npm install
 ``
 
-3.- ¡Jugar!
+3.- ¡Grafica!
 
 `npm run play`
-
-
-
-
-
-
-
-
-
-
