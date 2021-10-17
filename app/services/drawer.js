@@ -1,9 +1,11 @@
 class Drawer {
-    constructor(canvas, unit, font) {
+    constructor(canvas, unit, font, wrapper) {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext("2d");
         this.unit = unit;
         this.font = font;
+
+        this.wrapper = wrapper || document.querySelector(".plane-wrapper");
     }
 
     setValues() {
@@ -31,13 +33,13 @@ class Drawer {
             this.ctx.fillRect(0, i * this.unit, this.width, 1.2);
             this.ctx.fillStyle = colors.numbers;
             this.ctx.fillText(`${this.start + i}`, i * this.unit, this.height / 2);
-            this.ctx.fillText(`${this.start + i}`, this.width / 2, i * this.unit);
+            this.ctx.fillText(`${-this.start - i}`, this.width / 2, i * this.unit);
         }
-
         this.ctx.fillStyle = colors.mainAxis;
         this.ctx.fillRect(0, this.height / 2, 10000, 1.2);
         this.ctx.fillRect(this.width / 2, 0, 1.2, 10000);
         this.currentGraphs = 0;
+        this.wrapper.scroll(500, 500);
     }
 
 
