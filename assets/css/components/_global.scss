@@ -3,21 +3,30 @@ $gradient-bg: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 $color-borders: #6ea5de;
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 
 }
 
 body {
-  background-color: $color-bg;
-  background-image: $gradient-bg;
+    background-color: $color-bg;
+    background-image: $gradient-bg;
 }
 
+input, button {
+    transition: scale ease-in-out 0.2s;
+
+    &:focus-visible {
+        outline: none;
+        transform: scale(1.1);
+    }
+
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');

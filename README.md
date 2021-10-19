@@ -1,28 +1,57 @@
-# Calculadora-Gráfica
+# Graphic Calculator
 
-Calculadora gráfica y muy pero muy mágica
+Technical test for Platzi Master
 
-#### ¡Ingresa hasta 5 coordenadas distintas!
+#### ¡Type 5 distinct coordinates and watch magic!
 
-Gráfica desde -40 hasta 40 en el eje **x** y **y**
+Graph from -40 to 40 in **x** and **y** axis
 ___
 
-## Instalación
+## gh-pages:
 
-gh-pages: [Page](https://run19.github.io/Calculadora-grafica/)
+[Graphic Calculator](https://run19.github.io/Calculadora-grafica/)
+___
 
-¡Córrelo localmente!
+## Instalation
 
-1.- Clonar:
+¡Run it locally!
+
+1. Clone:
 
 `Git clone <public url>`
 
-2.- Instalar dependencias:
+2. Install dependencies:
 
 ``
 npm install
 ``
 
-3.- ¡Grafica!
+3. ¡Graph!
 
 `npm run play`
+
+___
+
+## Made with:
+
+App technologies:
+
+- Html
+- Sass
+- JavaScript
+
+Deployment:
+
+- Gh pages
+
+Design:
+
+- Divine Inspiration
+
+
+___
+
+## License
+
+This project is made under [MIT](https://opensource.org/licenses/MIT) license
+

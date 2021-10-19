@@ -3,27 +3,43 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Calculadora Gráfica</title>
+    <title>Graphic Calculator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
 <header class="header">
-    <h1>Calculadora Grafica</h1>
+    <h1>Graphic Calculator</h1>
     <div class="header__coords">
         <div class="header__coords__container">
-            <label for="coord_x" class="header__coords__container--label">Coordenada X
-            </label>
-            <input id="coord_x" class="header__coords__container--input" type="number">
-            <label for="coord_y" class="header__coords__container--label">Coordenada Y
-            </label>
-            <input id="coord_y" class="header__coords__container--input" type="number">
+            <div class="coords--inputs">
+
+                <label for="coord_x" class="header__coords__container--label"> X
+                </label>
+                <input id="coord_x" class="header__coords__container--input" type="number">
+                <label for="coord_y" class="header__coords__container--label"> Y
+                </label>
+                <input id="coord_y" class="header__coords__container--input" type="number">
+            </div>
         </div>
         <div class="header__coords__container">
-            <button id="graph" class="header__coords__container--btn" type="button">¡Graficar!
-            </button>
-            <input id="color" type="color" value="#6A18CD">
-            <button id="restart" class="header__coords__container--btn" type="button">¡Reiniciar!
-            </button>
+            <div class="coords--buttons">
+                <button id="graph" class="header__coords__container--btn" type="button">¡Graph!
+                </button>
+                <button id="point" class="header__coords__container--btn" type="button">¡Point!
+                </button>
+                <button id="restart" class="header__coords__container--btn" type="button">
+                    ¡Restart!
+                </button>
+            </div>
+            <div class="coords--colors">
+                <input id="color" type="color" value="#6A18CD">
+            </div>
+
+
         </div>
     </div>
 
