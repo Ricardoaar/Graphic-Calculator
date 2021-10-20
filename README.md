@@ -53,5 +53,5 @@ ___
 
 ## License
 
-This project is made under [MIT](https://opensource.org/licenses/MIT) license
+This project is under [MIT](https://opensource.org/licenses/MIT) license
 
