@@ -9,7 +9,7 @@ ___
 
 ## gh-pages:
 
-[Graphic Calculator](https://run19.github.io/Calculadora-grafica/)
+[Graphic Calculator](https://captainrun.github.io/Graphic-Calculator/)
 ___
 
 ## Instalation
